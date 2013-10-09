@@ -1,15 +1,21 @@
 <div class="sub-container">
-
   <form id="login_table" action="/login" method="post">
     <br><br>
-    Login to see the secret recipe of the day! Yay!
-    <br><br>
-    <label class="label" for="email"> Email: </label>
-    <input class="input" id="login_email" type="text" name="existing_email">
-    <br><br>
-    <label class="label" for="password"> Password: </label>
-    <input class="input" id="login_password" type="text" name="existing_password">
+    Login to see the secret recipe! Yay!
 
+    <br><br>
+    <label for="email"> Email: </label>
+    <input id="login_email" type="text" name="existing_email">
+
+    <br><br>
+    <label for="password"> Password: </label>
+    <input id="login_password" type="text" name="existing_password">
+    <br><br>
+    <input type="submit" value="Submit">
   </form>
 
+  <p>
+    Not already registered?
+    <%= erb :create_account_link %>
+  </p>
 </div>

@@ -1,9 +1,14 @@
 <div id="container">
-  <h1>Welcome to Secret Recipes!</h1>
-  <p>Please
-    <a href="/login">login</a>
+  <h1>Awesome Secret Recipe</h1>
+  <br>
+  <form id="secret_recipe" method="post" action="/login">
+    <input type="submit" value="Take a look!">
+    <br>
+  </form>
+  <br>
+  <p>
+    <a href="/login">login </a>
     or
-    <a href="/new_account">create an account</a>
-    .
+    <%= erb :create_account_link %>
   <p>
 </div>
