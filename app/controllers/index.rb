@@ -1,6 +1,16 @@
 get '/' do
-  # Look in app/views/index.erb
   erb :index
 end
 
-#Implement loggin in by POSTing to a /login URL
+get '/login' do 
+  erb :login
+end
+
+get '/new_account' do
+  erb :new_account
+end
+
+post '/new_account' do
+  @user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
+  erb :user_page
+end
