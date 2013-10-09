@@ -14,6 +14,15 @@ get '/secret_recipe' do
   erb :secret_recipe
 end
 
+post '/login' do
+  User.f
+end
+
+post '/user_page' do
+  current_user = User
+  erb :user_page
+end
+
 post '/new_account' do
   @user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
   erb :user_page
