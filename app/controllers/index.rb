@@ -34,6 +34,6 @@ post '/login' do
 end
 
 post '/new_account' do
-  @user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
+  p User.create(first_name: params[:user_first_name], last_name: params[:user_last_name], email: params[:new_email], password: params[:new_password])
   erb :index
 end
